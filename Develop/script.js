@@ -17,7 +17,16 @@ function generatePassword() {
  special = confirm("Would you like special characters?");
 
  if (number === true){
-   
+  math.floor(math.random()*number.length)
+ }
+ if (upper === true){
+  math.floor(math.random()*upper.length)
+ }
+ if (lower === true){
+  math.floor(math.random()*lower.length)
+ }
+ if (special === true){
+  math.floor(math.random()*special.length)
  }
 }
 
