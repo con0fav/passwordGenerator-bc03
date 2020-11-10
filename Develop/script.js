@@ -1,80 +1,69 @@
 // Assignment Code
 const generateBtn = document.querySelector("#generate");
 
+var number = "0123456789";
+var special = "!@#$%^&*()_-+={}[]/<>,.;':";
+var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var lower = upper.toLowerCase();
 
 
-
-//be sure to console.log
-//use arrays or objects, list of numbers
-// to build array use var lowChar ="abc" ".split"("");
-//^also google split 
-
-//radio buttons assigned to toggle each function
-
-function getRandomUpperCase(){
-  return String.fromCharCode(math.floor(math.random()*26)+65);
-}
-
-function getRandomLowerCase(){
-  return String.fromCharCode(math.floor(math.random()*26)+97);
-}
-
-function getRandomNumber(){
-  return String.fromCharCode(math.floor(math.random()*26)+10);
-}
-
-function getRandomSpecial(){
-  var special = "!@#$%^&*()[]{}<>,-~?"
-  return special[math.floor(math.random()*special.length)];
-}
-
-//potentially turn functions into variables?
-//figure out if math.random has to be used to return random values
-
-var generatePass = {
-  upper : getRandomUpperCase,
-  lower : getRandomLowerCase,
-  number : getRandomNumber,
-  special : getRandomSpecial
-};
-
-//console.log(generatePass);
-//ex: var numbers = [0,1,2,3,4,5,6,7,9] for arrays, lower, upper, special
 
 //asks for what values in password
 function generatePassword() {
-  confirm(getRandomLowerCase);
-  confirm(getRandomUpperCase);
-  confirm(getRandomNumber);
-  confirm(getRandomSpecial);
+ const passwordLength = 16;
+ number = confirm("Would you like numbers?");
+ upper = confirm ("Would you like upper case letters?");
+ lower = confirm("Would you like lower case letters?");
+ special = confirm("Would you like special characters?");
 
+ if (number === true){
+   
+ }
 }
 
-//console.log(generatePassword)
-//password length
-//const passwordLength = prompt()
-//confirm use number
-//confirm use lowercase
-//confirm use uppercase
-//confirm use special
-// Write password to the #password input, using prompt()
 
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
+  
   passwordText.value = password;
-
+  
 }
 
 
-//pushes password into text area
-
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword)
 
 
 //to do for enhanced functionality:
 //radio buttons (style of button) boolean button, in the html
 //how to copy password element after generation
 //how to save password in local storage
+
+
+//use following for more effienct calling of characters
+// function getUpperCase(){
+  //   return String.fromCharCode(math.floor(math.random()*26)+65);
+  // }
+  
+  // function getLowerCase(){
+    //   return String.fromCharCode(math.floor(math.random()*26)+97);
+    // }
+    
+    // function getNumber(){
+      //   return String.fromCharCode(math.floor(math.random()*26)+10);
+      // }
+      
+      // function getSpecial(){
+        //   var special = "!@#$%^&*()[]{}<>,-~?"
+        //   return special[math.floor(math.random()*special.length)];
+        // }
+        
+        
+        
+// var generatePass = {
+        //   upper : getUpperCase,
+        //   lower : getLowerCase,
+        //   number : getNumber,
+        //   special : getSpecial
+        // };
