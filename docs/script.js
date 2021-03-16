@@ -10,7 +10,9 @@ var lower = upper.toLowerCase();
 
 //asks for what values in password
 function generatePassword() {
- const passwordLength = 16;
+
+ var passwordLength = 16;
+
  number = confirm("Would you like numbers?");
  upper = confirm ("Would you like upper case letters?");
  lower = confirm("Would you like lower case letters?");
@@ -27,6 +29,9 @@ function generatePassword() {
  }
  if (special === true){
   math.floor(math.random()*special.length)
+ } if (number === false && upper === false && lower === false && special === false) {
+   alert("Must select an option.");
+   return;
  }
 }
 
