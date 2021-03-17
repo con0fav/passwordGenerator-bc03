@@ -20,16 +20,16 @@ function generatePassword() {
 
 
   //  if (number === true){
-  //   math.floor(math.random()*number.length)
+  //   Math.floor(Math.random()*number.length)
   //  }
   //  if (upper === true){
-  //   math.floor(math.random()*upper.length)
+  //   Math.floor(Math.random()*upper.length)
   //  }
   //  if (lower === true){
-  //   math.floor(math.random()*lower.length)
+  //   Math.floor(Math.random()*lower.length)
   //  }
   //  if (special === true){
-  //   math.floor(math.random()*special.length)
+  //   Math.floor(Math.random()*special.length)
   //  } if (number === false && upper === false && lower === false && special === false) {
   //    alert("Must select an option.");
   //    return;
@@ -39,19 +39,27 @@ function generatePassword() {
     charColl += number;
   }
   if (upperQ) {
-
+    charColl += upper;
   }
   if (lowerQ) {
-
+    charColl += lower;
   }
   if (specialQ) {
-
+    charColl += special;
   }
   if (number === false && upper === false && lower === false && special === false) {
     alert("Must select an option.");
     return;
   }
 
+  var genRandom = "";
+
+  for (var i = 0; i < passwordLength; i++) {
+    var random = Math.floor(Math.random() * charColl.length)
+    
+    genRandom += charColl[random];
+  }
+  return genRandom;
 }
 
 
@@ -75,20 +83,20 @@ generateBtn.addEventListener("click", writePassword)
 
 //use following for more effienct calling of characters
 // function getUpperCase(){
-  //   return String.fromCharCode(math.floor(math.random()*26)+65);
+  //   return String.fromCharCode(Math.floor(Math.random()*26)+65);
   // }
 
   // function getLowerCase(){
-    //   return String.fromCharCode(math.floor(math.random()*26)+97);
+    //   return String.fromCharCode(Math.floor(Math.random()*26)+97);
     // }
 
     // function getNumber(){
-      //   return String.fromCharCode(math.floor(math.random()*26)+10);
+      //   return String.fromCharCode(Math.floor(Math.random()*26)+10);
       // }
 
       // function getSpecial(){
         //   var special = "!@#$%^&*()[]{}<>,-~?"
-        //   return special[math.floor(math.random()*special.length)];
+        //   return special[Math.floor(Math.random()*special.length)];
         // }
 
 
