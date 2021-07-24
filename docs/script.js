@@ -1,4 +1,5 @@
 const generateBtn = document.querySelector("#generate");
+const copyBtn = document.querySelector("#copy");
 
 var number = "0123456789";
 var special = "!@#$%^&*()_-+={}[]/<>,.;':";
@@ -16,24 +17,6 @@ function generatePassword() {
   upperQ = confirm("Would you like upper case letters?");
   lowerQ = confirm("Would you like lower case letters?");
   specialQ = confirm("Would you like special characters?");
-
-
-
-  //  if (number === true){
-  //   Math.floor(Math.random()*number.length)
-  //  }
-  //  if (upper === true){
-  //   Math.floor(Math.random()*upper.length)
-  //  }
-  //  if (lower === true){
-  //   Math.floor(Math.random()*lower.length)
-  //  }
-  //  if (special === true){
-  //   Math.floor(Math.random()*special.length)
-  //  } if (number === false && upper === false && lower === false && special === false) {
-  //    alert("Must select an option.");
-  //    return;
-  //  }
 
   if (numberQ) {
     charColl += number;
@@ -107,3 +90,22 @@ generateBtn.addEventListener("click", writePassword)
         //   number : getNumber,
         //   special : getSpecial
         // };
+
+  
+  
+  
+        //  if (number === true){
+  //   Math.floor(Math.random()*number.length)
+  //  }
+  //  if (upper === true){
+  //   Math.floor(Math.random()*upper.length)
+  //  }
+  //  if (lower === true){
+  //   Math.floor(Math.random()*lower.length)
+  //  }
+  //  if (special === true){
+  //   Math.floor(Math.random()*special.length)
+  //  } if (number === false && upper === false && lower === false && special === false) {
+  //    alert("Must select an option.");
+  //    return;
+  //  }
