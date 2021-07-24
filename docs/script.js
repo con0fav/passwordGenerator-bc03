@@ -53,9 +53,14 @@ function writePassword() {
   passwordText.value = password;
 }
 
+function copyPassword(){
+  
+}
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword)
+copyBtn.addEventListener("click", copyPassword)
 
 
 //to do for enhanced functionality:
