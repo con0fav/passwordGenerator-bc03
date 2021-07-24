@@ -1,5 +1,6 @@
 const generateBtn = document.querySelector("#generate");
 const copyBtn = document.querySelector("#copy");
+const passwordText = document.querySelector("#password");
 
 var number = "0123456789";
 var special = "!@#$%^&*()_-+={}[]/<>,.;':";
@@ -48,16 +49,14 @@ function generatePassword() {
 
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 }
 
 function copyPassword(){
-  var copyText = document.getElementById("#password");
 
-  copyText.select();
-  copyText.setSelectionRange(0, 99999);
+  passwordText.select();
+  passwordText.setSelectionRange(0, 99999);
 
   document.execCommand("copy");
 
